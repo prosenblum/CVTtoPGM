@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7426D4C01573DDCF00812DD0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7426D4BF1573DDCF00812DD0 /* main.cpp */; };
+		7426D4C01573DDCF00812DD0 /* OLD main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7426D4BF1573DDCF00812DD0 /* OLD main.cpp */; };
 		7426D4C21573DDCF00812DD0 /* CVTtoPGM.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7426D4C11573DDCF00812DD0 /* CVTtoPGM.1 */; };
+		7426D4D31573DE0000812DD0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7426D4CD1573DDFF00812DD0 /* main.cpp */; };
+		7426D4D51573DF9E00812DD0 /* OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7426D4D41573DF9E00812DD0 /* OpenCV.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +28,20 @@
 
 /* Begin PBXFileReference section */
 		7426D4BB1573DDCF00812DD0 /* CVTtoPGM */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CVTtoPGM; sourceTree = BUILT_PRODUCTS_DIR; };
-		7426D4BF1573DDCF00812DD0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7426D4BF1573DDCF00812DD0 /* OLD main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "OLD main.cpp"; sourceTree = "<group>"; };
 		7426D4C11573DDCF00812DD0 /* CVTtoPGM.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = CVTtoPGM.1; sourceTree = "<group>"; };
+		7426D4C81573DDFF00812DD0 /* all10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = all10.txt; sourceTree = "<group>"; };
+		7426D4C91573DDFF00812DD0 /* build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build.sh; sourceTree = "<group>"; };
+		7426D4CA1573DDFF00812DD0 /* haarcascade_frontalface_alt.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt.xml; sourceTree = "<group>"; };
+		7426D4CB1573DDFF00812DD0 /* lower3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lower3.txt; sourceTree = "<group>"; };
+		7426D4CC1573DDFF00812DD0 /* new_person.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = new_person.txt; sourceTree = "<group>"; };
+		7426D4CD1573DDFF00812DD0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7426D4CE1573DDFF00812DD0 /* paul.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paul.jpg; sourceTree = "<group>"; };
+		7426D4CF1573DE0000812DD0 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		7426D4D01573DE0000812DD0 /* testface.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = testface.jpg; sourceTree = "<group>"; };
+		7426D4D11573DE0000812DD0 /* train.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = train.txt; sourceTree = "<group>"; };
+		7426D4D21573DE0000812DD0 /* upper6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = upper6.txt; sourceTree = "<group>"; };
+		7426D4D41573DF9E00812DD0 /* OpenCV.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenCV.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7426D4D51573DF9E00812DD0 /* OpenCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +75,19 @@
 		7426D4BE1573DDCF00812DD0 /* CVTtoPGM */ = {
 			isa = PBXGroup;
 			children = (
-				7426D4BF1573DDCF00812DD0 /* main.cpp */,
+				7426D4BF1573DDCF00812DD0 /* OLD main.cpp */,
+				7426D4C81573DDFF00812DD0 /* all10.txt */,
+				7426D4C91573DDFF00812DD0 /* build.sh */,
+				7426D4CA1573DDFF00812DD0 /* haarcascade_frontalface_alt.xml */,
+				7426D4CB1573DDFF00812DD0 /* lower3.txt */,
+				7426D4CC1573DDFF00812DD0 /* new_person.txt */,
+				7426D4CD1573DDFF00812DD0 /* main.cpp */,
+				7426D4D41573DF9E00812DD0 /* OpenCV.framework */,
+				7426D4CE1573DDFF00812DD0 /* paul.jpg */,
+				7426D4CF1573DE0000812DD0 /* README */,
+				7426D4D01573DE0000812DD0 /* testface.jpg */,
+				7426D4D11573DE0000812DD0 /* train.txt */,
+				7426D4D21573DE0000812DD0 /* upper6.txt */,
 				7426D4C11573DDCF00812DD0 /* CVTtoPGM.1 */,
 			);
 			path = CVTtoPGM;
@@ -117,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7426D4C01573DDCF00812DD0 /* main.cpp in Sources */,
+				7426D4C01573DDCF00812DD0 /* OLD main.cpp in Sources */,
+				7426D4D31573DE0000812DD0 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +202,10 @@
 		7426D4C61573DDCF00812DD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CVTtoPGM\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -181,6 +213,10 @@
 		7426D4C71573DDCF00812DD0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/CVTtoPGM\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

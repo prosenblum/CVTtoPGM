@@ -1,0 +1,81 @@
+# A C++ Facial Recognition Program
+
+Using Eigenfaces
+
+## Usage:
+
+### Building The Script
+
+Dependencies (for OSX):
+	1) Ruby
+	2) Homebrew
+	3) GCC (brew install gcc)
+
+To compile, run:
+
+$ ./build.sh
+
+### Running the script (webcam):
+
+$ ./OnlineFaceRec
+'n' -> New person: BlahbalH <ENTER>
+'t' -> Start Training
+
+### Recognizing a single image :: str -> int
+
+$ ./OnlineFaceRec single paul.jpg
+Usage: OnlineFaceRec [<command>] 
+  Valid commands are: 
+    single <single_img> 
+    train <train_file> 
+    test <test_file> 
+ (if no args are supplied, then online camera mode is enabled).
+[Face Detection took 11 ms and found 1 objects]
+Recognizing person in the single file.
+Training data loaded (340 training images of 2 people):
+People: <Stephen>, <Paul>.
+Most likely person in camera: '2' (confidence=0.943173).
+Person with Id 2, <Paul>
+Got a result Id!: 2, now look that up in the database!
+
+### Running with train (training input file e.g. all10.txt)
+
+$ ./OnlineFaceRec train all10.txt
+...
+
+Contents of a train.txt file:
+id name    path_to_pgm (image)
+1 Stephen data/1_Stephen56.pgm
+1 Stephen data/1_Stephen57.pgm
+
+## Editing the source code:
+
+Main methods I've added:
+
+Check out line 666 in method recognizeFromFilename
+
+// write this bad boy out to disk
+normalizedImg = cropAndNormalize(greyscaleImg, faceRect);
+
+/** ADD THIS **/
+char cstr[256]; // define a name for the output file
+// make sure that the pathToFile (command line argument) is a *.pgm file! XXX
+snprintf(cstr, sizeof(cstr)-1, "%s", pathToFile);
+printf("Storing the current face of '%s' into image '%s'.\n", newPersonName, cst\
+r);
+cvSaveImage(cstr, normalizedImg, NULL);
+
+*bigDaddy*
+int recognizeFromFilename(const char *rawImgFilename);
+
+IplImage *img = cvLoadImage(fileName, CV_LOAD_IMAGE_GRAYSCALE)
+
+int loadTrainingData(CvMat ** pTrainPersonNumMat)
+int loadFaceImgArray(const char * filename)
+bool faceFound(CvRect faceRect)
+int idFromNormalizedImg(IplImage* normalizedImg, float* pConfidence)
+IplImage* cropAndNormalize(IplImage* greyscaleImage, CvRect faceRect)
+IplImage* normalizeImage(IplImage* sizedImg)
+
+
+
